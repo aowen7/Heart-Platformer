@@ -78,7 +78,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wmcij"]
-size = Vector2(16, 16)
+size = Vector2(8, 15)
 
 [node name="Player" type="CharacterBody2D"]
 floor_constant_speed = true
@@ -86,9 +86,10 @@ floor_snap_length = 2.0
 script = ExtResource("1_icbae")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -10)
 sprite_frames = SubResource("SpriteFrames_gok13")
-animation = &"run"
-frame_progress = 0.436996
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7.5)
 shape = SubResource("RectangleShape2D_wmcij")
