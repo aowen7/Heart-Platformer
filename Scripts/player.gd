@@ -42,8 +42,9 @@ func handle_acceleration(input_axis, delta):
 		velocity.x = move_toward(velocity.x, movement_data.speed * input_axis, movement_data.acceleration * delta)
 
 func apply_friction(input_axis, delta):
-	if input_axis == 0:
+	if input_axis == 0 and is_on_floor():
 		velocity.x = move_toward(velocity.x, 0, movement_data.friction * delta)
+		
 
 func update_animations(input_axis):
 	if input_axis != 0:

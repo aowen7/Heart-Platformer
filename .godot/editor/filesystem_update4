@@ -1,6 +1,4 @@
 res://Scenes/player.tscn
 res://Scripts/player.gd
-res://Scenes/world.tscn
 res://Assets/PlayerMovementData.gd
-res://Assets/FasterMovementData.tres
-res://Assets/SlowMovementData.tres
+res://Scenes/world.tscn
