@@ -2,3 +2,4 @@ res://Scenes/player.tscn
 res://Scripts/player.gd
 res://Scenes/world.tscn
 res://Assets/DefaultMovementData.tres
+res://Assets/PlayerMovementData.gd
