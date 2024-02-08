@@ -1,4 +1,4 @@
 res://Scenes/player.tscn
 res://Scripts/player.gd
-res://Assets/PlayerMovementData.gd
 res://Scenes/world.tscn
+res://Assets/DefaultMovementData.tres
