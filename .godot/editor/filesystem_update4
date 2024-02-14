@@ -3,3 +3,5 @@ res://Scripts/player.gd
 res://Scenes/world.tscn
 res://Scenes/spikes.tscn
 res://hazard_area.tscn
+res://Scenes/heart.tscn
+res://Scenes/heart.gd
