@@ -8,3 +8,4 @@ res://hazard_area.tscn
 res://level_completed.tscn
 res://Scripts/Events.gd
 res://Scripts/world.gd
+res://level_tile_map.tscn

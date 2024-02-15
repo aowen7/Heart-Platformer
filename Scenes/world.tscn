@@ -5,64 +5,53 @@
 [ext_resource type="PackedScene" uid="uid://2wisadtqei0d" path="res://Scenes/spikes.tscn" id="3_qf0l1"]
 [ext_resource type="PackedScene" uid="uid://yt0gykjyvchr" path="res://Scenes/heart.tscn" id="4_ac6yx"]
 [ext_resource type="PackedScene" uid="uid://dgjjkl5vtv5sh" path="res://level_completed.tscn" id="5_sa0jn"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rgb5j"]
-size = Vector2(20, 71.25)
+[ext_resource type="PackedScene" uid="uid://c4p4h5to6ioeq" path="res://level_tile_map.tscn" id="6_021gi"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_m0mt7")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-collision_mask = 0
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(0, 0, 16, 0, 16, 104, 48, 104, 80, 120, 104, 120, 120, 104, 136, 104, 136, 144, 160, 144, 160, 112, 192, 112, 192, 120, 216, 120, 248, 104, 264, 104, 264, 128, 296, 128, 296, 0, 320, 0, 320, 184, 0, 184)
-
-[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
-
 [node name="Player" parent="." instance=ExtResource("2_6hpau")]
 position = Vector2(32, 104)
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(246.316, 35.7908)
-shape = SubResource("RectangleShape2D_rgb5j")
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
-offset_left = 236.0
-offset_right = 256.0
-offset_bottom = 71.0
-
 [node name="Spikes" parent="." instance=ExtResource("3_qf0l1")]
-position = Vector2(144, 136)
+position = Vector2(136.451, 136)
 
 [node name="Spikes2" parent="." instance=ExtResource("3_qf0l1")]
 position = Vector2(152, 136)
 
 [node name="Spikes3" parent="." instance=ExtResource("3_qf0l1")]
-position = Vector2(272, 120)
+position = Vector2(264.451, 120.265)
 
 [node name="Spikes4" parent="." instance=ExtResource("3_qf0l1")]
-position = Vector2(288, 120)
+position = Vector2(280.849, 120.265)
 
 [node name="Heart" parent="." instance=ExtResource("4_ac6yx")]
-position = Vector2(128, 96)
+position = Vector2(119.922, 101.695)
 
 [node name="Heart2" parent="." instance=ExtResource("4_ac6yx")]
-position = Vector2(286.725, 60.1065)
+position = Vector2(283.017, 82.0904)
 
 [node name="Heart3" parent="." instance=ExtResource("4_ac6yx")]
 position = Vector2(265.144, 35.2785)
 
 [node name="Heart4" parent="." instance=ExtResource("4_ac6yx")]
-position = Vector2(308.326, -8.37567)
+position = Vector2(304.353, -7.84594)
 
 [node name="Heart5" parent="." instance=ExtResource("4_ac6yx")]
-position = Vector2(28.5596, 36.4912)
+position = Vector2(25.6461, 50.794)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="LevelCompleted" parent="CanvasLayer" instance=ExtResource("5_sa0jn")]
 visible = false
+
+[node name="LevelTileMap" parent="." instance=ExtResource("6_021gi")]
+layer_0/name = "Base"
+layer_0/tile_data = PackedInt32Array(655360, 65536, 2, 589824, 65536, 1, 524288, 65536, 1, 458752, 327680, 2, 393216, 131072, 1, 327680, 131072, 1, 262144, 131072, 1, 196608, 131072, 1, 131072, 131072, 1, 65536, 131072, 1, 0, 131072, 0, 458753, 65536, 0, 458754, 131072, 0, 524290, 327680, 2, 589826, 65536, 1, 655362, 65536, 2, 655361, 65536, 2, 589825, 65536, 1, 524289, 65536, 1, 524291, 65536, 0, 524292, 65536, 0, 524293, 65536, 0, 524294, 65536, 0, 524295, 458752, 2, 458759, 196608, 0, 589831, 327680, 2, 655367, 65536, 2, 655366, 65536, 2, 655365, 65536, 2, 655364, 65536, 2, 655363, 65536, 2, 589827, 65536, 1, 589828, 65536, 1, 589829, 65536, 1, 589830, 65536, 1, 589832, 65536, 0, 589833, 65536, 0, 589834, 393216, 2, 589835, 65536, 1, 589836, 65536, 1, 589837, 65536, 1, 589838, 65536, 1, 589839, 65536, 1, 589840, 65536, 1, 589841, 65536, 1, 589842, 65536, 1, 655378, 65536, 2, 655379, 131072, 2, 589843, 131072, 1, 655377, 65536, 2, 655376, 65536, 2, 655375, 65536, 2, 655374, 65536, 2, 655373, 65536, 2, 655372, 65536, 2, 655371, 65536, 2, 655370, 65536, 2, 655369, 65536, 2, 655368, 65536, 2, 524307, 131072, 1, 458771, 131072, 1, 393235, 131072, 1, 327699, 131072, 1, 262163, 131072, 1, 262162, 0, 1, 196626, 0, 1, 196627, 131072, 1, 131091, 131072, 1, 65555, 131072, 1, 65554, 0, 1, 18, 0, 0, 19, 131072, 0, 131090, 0, 1, 327698, 0, 1, 393234, 0, 1, 458770, 0, 1, 524306, 393216, 2, 524305, 65536, 0, 524304, 65536, 0, 524303, 524288, 2, 524302, 65536, 0, 524301, 65536, 0, 524300, 65536, 0, 524299, 65536, 0, 524298, 0, 0, 458767, 196608, 0, 131087, 131072, 1, 65551, 131072, 1, 15, 131072, 0, 131086, 0, 1, 65550, 0, 1, 14, 0, 0, 196623, 131072, 2, 196622, 0, 2, 65535, 0, 0, 131071, 0, 1, 196607, 0, 1, 262143, 0, 1, 327679, 0, 1, 393215, 0, 1, 458751, 0, 1, 524287, 0, 1, 589823, 0, 1, 655359, 0, 1, 720895, 0, 2)
+layer_1/name = "Slopes"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array(458758, 262145, 0, 458757, 196609, 0, 458755, 393218, 0, 458766, 262145, 0, 458765, 196609, 0, 458759, 131072, 0, 458754, 65536, 0, 524294, 65536, 1, 524295, 131072, 1, 524293, 327681, 0, 524291, 327682, 0, 524290, 65536, 1, 458767, 131072, 0, 524302, 65536, 1, 524303, 65536, 1, 524301, 327681, 0, 524306, 65536, 1, 589834, 65536, 1, 589831, 65536, 1)
