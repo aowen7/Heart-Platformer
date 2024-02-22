@@ -1,3 +1,4 @@
+Timer
 Button
 VBoxContainer
 CenterContainer
@@ -15,5 +16,4 @@ CollisionPolygon2D
 Node2D
 Camera2D
 StaticBody2D
-Timer
 AnimatedSprite2D
