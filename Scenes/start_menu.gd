@@ -2,10 +2,8 @@ extends CenterContainer
 
 @onready var start_game_button = %StartGameButton
 
-
-
 func _ready():
-	pass
+	start_game_button.grab_focus()
 
 func _on_start_game_button_pressed():
 	await LevelTransition.fade_to_black
